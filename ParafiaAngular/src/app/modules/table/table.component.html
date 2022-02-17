@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <ng-container *ngTemplateOutlet="header"></ng-container>
+  </tr>
+
+  <tr *ngFor="let el of list | slice: counter:pagination; let i = index">
+    <ng-container
+      *ngTemplateOutlet="content; context: { $implicit: { el: this.el, i: i } }"
+    ></ng-container>
+  </tr>
+</table>
+<button *ngIf="counter > 1" (click)="decrement()">Poprzednia strona</button>
+<button *ngIf="pagination <= list.length" (click)="increment()">
+  Następna strona
+</button>
