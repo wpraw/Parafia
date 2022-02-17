@@ -1,0 +1,26 @@
+<div class="admin-add-post-panel">
+  <div>
+    <app-table [list]="posts">
+      <ng-template #header>
+        <th>LP</th>
+        <th>Post ID</th>
+        <th>Tytuł</th>
+        <th>Imię wstawiającego</th>
+        <th>Nazwisko wstawiającego</th>
+        <th>Data dodania</th>
+        <th>Akcje</th>
+      </ng-template>
+      <ng-template #content let-data>
+        <td>{{ data.i + 1 }}</td>
+        <td>{{ data.el.PostId }}</td>
+        <td>{{ data.el.Title }}</td>
+        <td>{{ data.el.Name }}</td>
+        <td>{{ data.el.Nazwisko }}</td>
+        <td>{{ data.el.DataDodania }}</td>
+        <td>
+          <button (click)="deletePost(data.el.PostId)">Usuń</button>
+        </td>
+      </ng-template>
+    </app-table>
+  </div>
+</div>

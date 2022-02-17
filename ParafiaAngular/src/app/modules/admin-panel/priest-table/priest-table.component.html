@@ -1,0 +1,24 @@
+<div class="admin-add-post-panel">
+  <div>
+    <app-table [list]="priests">
+      <ng-template #header>
+        <th>LP</th>
+        <th>Priest ID</th>
+        <th>Degree</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Akcje</th>
+      </ng-template>
+      <ng-template #content let-data>
+        <td>{{ data.i + 1 }}</td>
+        <td>{{ data.el.PriestId }}</td>
+        <td>{{ data.el.Degree }}</td>
+        <td>{{ data.el.Name }}</td>
+        <td>{{ data.el.Surname }}</td>
+        <td>
+          <button (click)="deletePriest(data.el.PriestId)">Usuń</button>
+        </td>
+      </ng-template>
+    </app-table>
+  </div>
+</div>
