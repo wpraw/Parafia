@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div id="loginContent" class="loginContent">
+  <div id="background-logpage">
+    <div class="shape-logpage"></div>
+    <div class="shape-logpage"></div>
+    <form class="form-logpage" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h3>Logowanie do panelu administratora</h3>
+
+      <label for="username">Nazwa użytkownika</label>
+      <input
+        type="text"
+        placeholder="Nazwa użytkownika"
+        id="username"
+        formControlName="username"
+      />
+
+      <label for="password">Hasło</label>
+      <input
+        type="password"
+        placeholder="Hasło"
+        id="password"
+        formControlName="password"
+      />
+
+      <button class="button-logpage" type="submit">Zaloguj</button>
+    </form>
+  </div>
+</div>
