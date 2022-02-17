@@ -1,0 +1,18 @@
+<div class="container-workers-subpage">
+  <div class="table-workers-subpage">
+    <app-table [list]="priests">
+      <ng-template #header>
+        <th>LP</th>
+        <th>Tytuł</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+      </ng-template>
+      <ng-template #content let-data>
+        <td>{{ data.i + 1 }}</td>
+        <td>{{ data.el.Degree }}</td>
+        <td>{{ data.el.Name }}</td>
+        <td>{{ data.el.Surname }}</td>
+      </ng-template>
+    </app-table>
+  </div>
+</div>

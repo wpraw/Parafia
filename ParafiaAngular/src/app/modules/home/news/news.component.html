@@ -1,0 +1,21 @@
+<div class="container-news-subpage">
+  <div class="title-news-subpage">
+    <h1>Aktualności</h1>
+  </div>
+  <br />
+</div>
+<div class="container-news-subpage">
+  <div class="all-news-subpage">
+    <div *ngFor="let post of posts" class="single-post-container">
+      <div class="single-post-container-title">
+        <h3>
+          {{ post.Title }}
+        </h3>
+        <h5>{{ post | post }}</h5>
+      </div>
+      <div class="single-post-container-text">
+        {{ post.Contents }}
+      </div>
+    </div>
+  </div>
+</div>
