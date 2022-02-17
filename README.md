@@ -1,0 +1,2 @@
+# Parafia
+projekt zaliczeniowy
