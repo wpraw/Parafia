@@ -1,0 +1,41 @@
+<div class="admin-add-post-panel">
+  <h3>Dodawanie nowego Księdza</h3>
+  <form [formGroup]="priestForm" (ngSubmit)="onSubmit()">
+    <input
+      placeholder="Imie"
+      type="text"
+      required
+      class="admin-add-input-user"
+      name="Name"
+      formControlName="Name"
+    />
+
+    <br />
+
+    <input
+      placeholder="Nazwisko"
+      type="text"
+      required
+      class="admin-add-input-user"
+      name="Surname"
+      formControlName="Surname"
+    />
+
+    <br />
+
+    <input
+      placeholder="Stopień"
+      type="phone"
+      required
+      class="admin-add-input-user"
+      name="Degree"
+      formControlName="Degree"
+    />
+
+    <br />
+
+    <button class="admin-add-user-button" variant="primary" type="submit">
+      Dodaj Księdza
+    </button>
+  </form>
+</div>

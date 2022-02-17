@@ -1,0 +1,33 @@
+<div class="admin-add-post-panel">
+  <h1>Panel administracyjny</h1>
+  <a routerLink="/logowanie">
+    <button (click)="logout()">Wyloguj</button>
+  </a>
+  <h3>Dodawanie ogłoszeń parafialnych</h3>
+  <form [formGroup]="postForm" (ngSubmit)="submitPost()">
+    <input
+      placeholder="Dodaj tytuł mój Panie..."
+      type="text"
+      required
+      class="admin-post-input-title"
+      name="title"
+      formControlName="title"
+    />
+
+    <br />
+
+    <textarea
+      placeholder="Dodaj treść swojego ogłoszenia parafialnego mój Panie..."
+      required
+      class="admin-post-input-desc"
+      name="desc"
+      formControlName="desc"
+    ></textarea>
+
+    <br />
+
+    <button class="admin-add-post-button" variant="primary" type="submit">
+      Opublikuj
+    </button>
+  </form>
+</div>
